@@ -1,0 +1,64 @@
+.contact-form
+	display: flex
+	justify-content: center
+	width: 100%
+	max-width: 600px
+	// margin: 10px 0
+	position: relative
+	@media screen and (max-height: 480px)
+		margin-top: 40px
+		padding-top: 30px
+	h2
+		@extend .font-serif
+		font-size: 2em
+		text-transform: uppercase
+		margin-bottom: 20px
+		color: $color-base
+		@media #{$screen-360}
+			font-size: 2.2em
+	.contact-form-plate
+		text-align: center
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 100%
+		max-width: 600px
+		min-width: 280px
+		@media #{$screen-320}
+			padding: 20px
+		.text-group
+			margin-bottom: 20px
+			color: $color-dark	
+		.form-group
+			margin-bottom: 10px
+			width: 100%
+			input, textarea
+				@extend .font-sans
+				font-size: 0.9em
+				font-style: italic
+				border: 2px solid $color-light
+				padding: 10px
+				width: 100%
+				color: $color-dark
+				background: lighten($color-light, 5%)
+				&:focus
+					border: 2px solid darken($color-light, 10%)
+					color: $color-base
+					background: lighten($color-light, 10%)
+					outline: none
+			textarea
+				height: 100px
+			p.help-block
+				font-style: italic
+				color: red
+				font-size: 0.9em
+				
+	.submit
+		float: right
+		#success
+
+			margin: 20px 0
+			color: $color-base
+			font-size: 1.1em
+		h5
+			font-size: 1.2em

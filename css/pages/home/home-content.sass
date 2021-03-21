@@ -1,0 +1,453 @@
+// ===================== hero top ==================== //
+.hero-holder
+	background: 
+		image: url(../images/stampamajice-tb-3.jpg)
+		repeat: no-repeat
+		size: cover
+		position: left top
+	width: 100%
+	height: calc(100vh - 110px)
+	min-height: 545px
+	position: relative
+	overflow: hidden
+	display: flex
+	align-items: center
+	justify-content: center
+	.hero-overlay
+		position: absolute
+		width: 40.5%
+		height: 100%
+		background: rgba($color-dark, 0.85)
+		top: 0
+		right: 0
+		bottom: 0
+		@media #{$screen-480}
+			width: 100%
+			background: rgba($color-dark, 0.65)
+		&:after
+			content: ''
+			position: absolute
+			right: 100%
+			top: 0
+			width: 0
+			height: 0
+			border-bottom: 1000px solid rgba($color-dark, 0.85)
+			border-left: 348px solid transparent
+	.hero-text-holder
+		// width: 100%
+		display: flex
+		align-items: flex-end
+		flex-direction: column
+		text-align: right
+		justify-content: space-around
+		position: relative
+		height: 60%
+		min-height: 400px
+		top: -20px
+		@media screen and (max-height: 600px)
+			top: -60px
+		.hero-text
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: flex-end
+			position: relative
+			top: 0
+			h3, h4
+				color: #fff
+			h1
+				color: $color-base
+				text-shadow: 2px 2px 8px rgba(#000, 0.25)
+			.divider-sm
+				width: 175px
+				background: #fff
+				height: 6px
+				margin: 25px 0 15px 0
+		.btn-cta
+			margin: 0 auto
+			top: 20px
+
+
+// ====================== o nama ========================= //
+
+#about-us
+	width: 100%
+	height: auto
+	background: 
+		image: url(../images/stampa-majice-pat.png)
+		repeat: repeat
+.hero-block-holder
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100%
+	height: auto
+	top: -52px
+	@media #{$screen-800}
+		width: 80%
+
+	.hero-block
+		max-width: 380px
+		min-width: 200px	
+		margin: 0 auto
+		background: #fff
+		text-align: center
+		border-top: 6px solid #fff
+		box-shadow: 0 0 92px rgba(#000, 0.25)
+		.block-img
+			width: 100%
+			img
+				width: 100%
+		.block-txt
+			margin: 40px 0
+.description-holder
+	text-align: center
+	padding: 120px 0 60px 0
+	position: relative
+	overflow: hidden
+	margin-top: -60px
+	.description
+		position: relative
+		z-index: 1
+	.title-back
+		position: absolute
+		top: 0
+		right: -20px
+		z-index: 0
+		@media #{$screen-800}
+			top: 60px
+		h2
+			@extend .font-disp
+			font-size: calc(15vw + 2em)
+			text-transform: uppercase
+			&#about-title
+				color:  rgba($color-light,0.4)
+	.btn-cta
+		margin: 0 auto
+		margin-top: 40px
+
+#center-block,
+#left-block,
+#right-block
+	z-index: 2
+	h3
+		text-transform: uppercase
+		font-size: 1.4em
+		line-height: 0.9em
+		font-weight: 600
+		color: #333
+	h2
+		text-transform: uppercase
+		font-size: 2.8em
+		line-height: 1em
+		@extend .font-disp
+#center-block
+	left: 0
+	top: 0
+	right: 0
+	width: 35%
+	z-index: 3
+	position: relative
+	box-shadow: 0 0 92px rgba(#000, 0.15), 0 20px 92px -10px rgba(#000, 0.25)
+	@media #{$screen-800}
+		width: 40%
+	@media #{$screen-600}
+		width: 100%
+	h2
+		color: $color-btn
+	&:after
+		content: ''
+		background: 
+			image: url(../images/block-bottom.png)
+			repeat: no-repeat
+			position: center
+		width: 100%
+		height: 38px
+		top: 100%
+		left: 0
+		position: absolute
+#left-block, #right-block
+	top: 30px
+	width: 30%
+	position: absolute
+	@media #{$screen-800}
+		// width: 25%
+	@media #{$screen-600}
+		display: none
+#left-block
+	right: 64%
+	border-bottom: 8px solid $color-base
+	h2
+		color: $color-base
+#right-block
+	left: 64%
+	border-bottom: 8px solid $color-btn-hover
+	h2
+		color: $color-btn-hover
+
+// ==================== hero small ================== //
+.herosm-holder
+	background:
+		image: url(../images/stampa-majice-cta2-img.jpg)
+		position: bottom right
+		size: content
+		repeat: repeat
+	position: relative
+	width: 100%
+	padding: 80px 0
+	z-index: 1
+	border-bottom: 7px solid $color-base
+	.herosm-overlay
+		position: absolute
+		width: 60%
+		height: 100%
+		top: 0
+		left: 0
+		bottom: 0
+		@media #{$screen-480}
+			width: 100%
+			right: 0
+			top: 0
+			left: 0
+			bottom: 0
+		&:after
+			content: ''
+			position: absolute
+			background: 
+				image: url(../images/stampa-majice-cover.png)
+				repeat: no-repeat
+				size: cover
+			width: 100%
+			height: 100%
+			top: 0
+			right: 0
+			z-index: 2
+			// display: none
+	.herosm-text
+		width: 45%
+		min-width: 300px
+		position: relative
+		z-index: 3
+		@media #{$screen-480}
+			text-align: center
+			width: 100%
+		h2
+			color: $color-light
+			text-transform: uppercase
+			font-size: 1.7em
+			line-height: 1.5em
+			font-weight: 400
+// ======================== design =================== //
+#design
+	padding: 200px 0 60px 0
+	width: 100%
+	overflow: hidden
+	.btn-def
+		margin: 80px auto 0 auto
+.design-holder
+	position: relative
+	.design-plate
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		box-shadow: 0 0 92px rgba(#000, 0.25)
+		position: relative
+		z-index: 2
+		.img-source
+			width: 25%
+			margin-bottom: 0
+			position: relative
+			overflow: hidden
+			@media #{$screen-600}
+				width: 50%
+			img
+				width: 100%
+			.thumb-over
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				z-index: 2
+				transform: translateX(calc(-100% - 130px))
+				&:after
+					content: ''
+					top: 0
+					left: 100%
+					position: absolute
+					width: 0
+					height: 0
+					opacity: 0.9
+					border-right: 130px solid transparent
+				&.color-base
+					background: rgba($color-base, 0.9)
+					.thumb-text
+						background: $color-btn
+						h4, h5
+							color: $color-base
+						.thumb-divider
+							background: $color-base
+							margin: 5px 0
+					&:after
+						border-top: 382px solid $color-base
+						
+				&.color-light
+					background: rgba($color-light, 0.9)
+					.thumb-text
+						background: $color-btn
+					h4, h5
+						color: $color-light
+					.thumb-divider
+						background: $color-light
+						margin: 5px 0
+					&:after
+						border-top: 382px solid $color-light
+				&.color-btn
+					background: rgba($color-btn, 0.9)
+					.thumb-text
+						background: $color-base
+					h4, h5
+						color: $color-btn
+					.thumb-divider
+						background: $color-btn
+						margin: 5px 0
+					&:after
+						border-top: 382px solid $color-btn
+				&.color-btn-hover
+					background: rgba($color-btn-hover, 0.9)
+					.thumb-text
+						background: $color-light
+					h4, h5
+						color: $color-btn-hover
+					.thumb-divider
+						background: $color-btn-hover
+						margin: 5px 0
+					&:after
+						border-top: 382px solid $color-btn-hover
+				&.color-dark
+					background: rgba($color-dark, 0.9)
+					.thumb-text
+						background: $color-light
+					h4, h5
+						color: $color-dark
+					.thumb-divider
+						background: $color-dark
+						margin: 5px 0
+					&:after
+						border-top: 382px solid $color-dark
+				.thumb-text
+					padding: 10px					
+					display: flex
+					flex-flow: column wrap
+					justify-content: center
+					align-items: center
+					opacity: 0
+					transform: translateX(10px)
+					text-align: center
+					.thumb-divider
+						width: 100%
+						height: 1px
+					h4
+						text-transform: uppercase
+					h5
+						font-style: italic
+
+			&:hover
+				.thumb-over
+					transform: translateX(0)
+					.thumb-text
+						animation: 
+							name: thumbtext
+							duration: 600ms
+							timing-function: cubic-bezier(0.1, 0.5, 0.7, 0.9)
+							delay: 200ms
+							fill-mode: forwards
+					
+				
+	.title-back
+		position: absolute
+		top: -150px
+		left: -10px
+		z-index: 0
+		h2
+			@extend .font-disp
+			font-size: calc(15vw + 2em)
+			text-transform: uppercase
+			padding: 0
+			margin: 0
+			line-height: 0.5
+			&#design-title
+				color:  rgba($color-light,0.3)
+
+@keyframes thumbtext
+	0%
+		opacity: 0
+		transform: translateX(10px)
+	100%
+		opacity: 1
+		transform: translateX(0)
+.lightbox
+	.lightbox .lb-image
+		border-radius: 0
+	.lb-outerContainer 
+		border-radius: 0
+	.lb-number
+		@extend .font-sans
+		font-style: italic
+		font-weight: 700
+		font-size: 1em
+		color: $color-base
+
+// ==================== production ========================= //
+#print
+	height: auto
+	width: 100%
+	background: 
+		image: url(../images/stampa-majice-pat.png)
+		repeat: repeat
+		// color: $color-light
+	overflow: hidden
+.print-holder
+	position: relative
+	.title-back
+		position: absolute
+		top: -10px
+		left: -30px
+		z-index: 0
+		@media #{$screen-600}
+			top: -2px
+			left: -10px
+		h2
+			@extend .font-disp
+			font-size: calc(15vw + 2em)
+			text-transform: uppercase
+			&#print-title
+				color:  rgba(#fff,0.4)
+	.print
+		display: flex
+		align-items: center
+		padding: 80px 0
+		@media #{$screen-600}
+			flex-direction: column
+			text-align: center
+			.col-1-2
+				width: 100%
+		.print-text-holder
+			position: relative
+			text-align: right
+			@media #{$screen-600}
+				text-align: center
+		.print-img-holder
+			width: 100%
+			position: relative
+			margin-top: 60px
+			@media #{$screen-600}
+				padding-top: 40px
+			img
+				width: 100%
+
+

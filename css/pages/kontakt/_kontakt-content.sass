@@ -1,0 +1,43 @@
+#kontakt-hero
+	width: 100%
+.header-slider
+	background:
+		image: url(../images/stampamajice-tb-3.jpg)
+		repeat: no-repeat
+		position: center center
+		size: cover
+	position: relative
+	padding: 100px 0
+	display: flex
+	justify-content: center
+	align-items: center
+	&:after
+		position: absolute
+		content: ''
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background: rgba($color-light, 0.4)
+	h1
+		position: relative
+		z-index: 2
+		color: $color-btn
+#kontakt-content
+	position: relative
+	overflow: hidden
+	.title-back
+		position: absolute
+		top: 0
+		left: -20px
+		z-index: -1
+
+		h2
+			@extend .font-disp
+			font-size: calc(15vw + 2em)
+			text-transform: uppercase
+			&#kontakt-title
+				color:  rgba($color-base, 0.15)
+	
+
+

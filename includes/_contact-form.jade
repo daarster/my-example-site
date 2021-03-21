@@ -1,0 +1,23 @@
+form#contactForm(name='sentMessage', novalidate='').contact-form-plate
+	.text-group
+		h2
+			|	Kontakt forma
+		p
+			|	Sva polja su obavezna
+	.form-group
+		input#name.form-control(placeholder='Vaše ime', required='', data-validation-required-message='Molimo unesite vaše ime.', type='text')
+		p.help-block.text-danger
+	.form-group
+		input#email.form-control(placeholder='Vaš e-mail', required='', data-validation-required-message='Molimo unesite vašu e-mail adresu.', type='email')
+		p.help-block.text-danger
+	.form-group
+		input#phone.form-control(placeholder='Vaš telefon', required='', data-validation-required-message='Molimo unesite vaš broj telefona.', type='tel')
+		p.help-block.text-danger
+	.form-group
+		textarea#message.form-control(placeholder='Vaša poruka', required='', data-validation-required-message='Molimo napišite poruku.')
+		p.help-block.text-danger
+	.submit
+		#success
+		button.btn-def.btn-cta
+			include ./_btn-def
+				h4 Pošaljite poruku

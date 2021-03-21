@@ -1,0 +1,254 @@
+// BASICS <<
+
+// mixins
+
+$color-base: #cdb380
+$color-dark: #031634
+$color-light: #e8ddcb
+$color-btn: #036564
+$color-btn-hover: #033649
+
+
+$transition-01: all .1s ease-in-out
+$transition-02: all .2s ease-in-out
+$transition-05: all .5s ease-in-out
+$transition-1: all 1s ease-in-out
+$transition-2: all 2s ease-in-out
+
+$screen-1366: 'only screen and (max-width: 1366px)'
+$screen-1200: 'only screen and (max-width: 1200px)'
+$screen-980: 'only screen and (max-width: 980px)'
+$screen-800: 'only screen and (max-width: 800px)'
+$screen-600: 'only screen and (max-width: 600px)'
+$screen-480: 'only screen and (max-width: 480px)'
+$screen-360: 'only screen and (max-width: 360px)'
+$screen-320: 'only screen and (max-width: 320px)'
+// structure
+
+*
+	transition: $transition-02
+	box-sizing: border-box
+
+body
+	font-size: 16px
+	width: 100%
+	height: 100%
+	line-height: 0
+	padding-top: 155px
+	@media #{$screen-800}
+		padding-top: 230px
+		@media #{$screen-600}
+			padding-top: 110px
+button, input, textarea
+	border: none
+
+// --------------- text and fonts ----------------- //
+
+.font-sans
+	font-family: 'Raleway', Arial, sans-serif
+.font-serif
+	font-family: 'Bree Serif', Georgia, serif
+.font-disp
+	font-family: 'Bree Serif', Georgia, serif
+
+h1, h2, h3, h4, h5, h6, p, li
+	line-height: 1
+h1
+	text-transform: uppercase
+
+h2, h3, h4, h5, h6, p, li
+	@extend .font-sans
+a
+	text-decoration: none
+h1
+	@extend .font-disp
+	font-size: calc(4vw + 2em)
+	line-height: 0.8em
+	// @media #{$screen-1366}
+	// 	font-size: 5.8em
+	// @media #{$screen-800}
+	// 	font-size: 4em
+h2
+	font-size: 3.7em
+	@media #{$screen-800}
+		font-size: 3em
+h3
+	font-size: 2.8em
+	line-height: 1.25em
+	font-weight: 700
+	@media #{$screen-800}
+		font-size: 1.3em
+h4
+	font-size: 1.4em
+	line-height: 1.25em
+	@media #{$screen-800}
+		font-size: 1em
+h5
+	font-size: 0.9em
+h6
+	font-size: 0.7em
+
+p
+	font-size: 1.1em
+	font-weight: 400
+	line-height: 1.5em
+	padding-bottom: 1.5em
+	color: #333
+	&:last-of-type
+		padding-bottom: 0
+	a
+		color: $color-base
+		&:hover
+			color: $color-btn
+
+
+//===================== basic classes ===================== //
+
+.text-center
+	text-align: center
+	
+.text-left
+	text-align: left
+
+.text-right
+	text-align: right
+
+.text-justify
+	text-align: justify
+
+// wrappers 
+
+.wrapper
+	width: 80%
+	max-width: 1164px
+	margin: 0 auto
+	@media #{$screen-800}
+		width: 90%
+	@media #{$screen-480}
+		width: 95%
+
+// dividers 
+
+.divider-line
+	height: 1px
+	width: 100%
+	background-color: rgba(#000, .1)
+	box-shadow: 0 1px 0 rgba(#fff, .8)
+
+// floating 
+
+.pull-left
+	float: left
+
+.pull-right
+	float: right
+
+.clear
+	clear: both
+
+//positioning
+
+.rel
+	position: relative
+
+.fix
+	position: fixed
+
+.abs
+	position: absolute
+
+.center
+	margin: 0 auto
+
+// displaying
+
+.flex
+	display: flex 
+
+.flex-center
+	display: flex
+	justify-content: center
+	align-items: center
+
+.block
+	display: block
+
+.inline 
+	display: inline 
+
+.inline-block
+	display: inline-block
+
+.hidden
+	display: none
+
+// ------------------------ buttons ----------------------- //
+.btn-def
+	width: 380px
+	height: 80px
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	text-decoration: none
+	@media screen and (max-width: 410px)
+		width: 300px
+		height: 74px
+		text-align: center
+		background: $color-btn
+		box-shadow: 0 0 0 3px rgba(#fff, 0.2), 0 0 16px rgba(#000, 0.2)
+		transition: all 200ms ease-in-out
+		&:hover
+			background: $color-btn-hover
+	#btn-trans
+		position: absolute
+		top: 0
+		left: 0
+		fill: $color-btn
+		-webkit-filter: drop-shadow( 0 0 14px rgba(#000, 0.25))
+		filter: drop-shadow( 0 0 14px rgba(#000, 0.25))
+		// transition: all 200ms ease-in-out
+		@media screen and (max-width: 410px)
+			display: none
+	h4
+		color: #fff
+		text-transform: uppercase
+		font-weight: 300
+		position: relative
+		z-index: 1
+	&:hover
+		#btn-trans
+			fill: $color-btn-hover
+
+.btn-link
+	@extend .font-serif
+	font-size: 2em
+	text-transform: uppercase
+	color: $color-btn
+	line-height: 1
+	margin: 20px 0
+	&:hover
+		text-decoration: underline
+		color: $color-btn-hover
+
+// --------------------- grid ------------------- //
+.flex-grid
+	display: flex
+	width: 1800px
+.col-1-2
+	width: calc(100%/2*1)
+.col-1-3
+	width: calc(100%/3*1)
+.col-2-3
+	width: calc(100%/3*2)
+.grid-block
+	padding: 0 15px
+
+// ------------------ elements ---------------------- //
+.title-back
+	h2
+		padding: 0
+		margin: 0
+		line-height: 0.5
+.content-holder
+	padding: 80px 0
